@@ -1,0 +1,114 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Student Name: TIANHAO
+Student ID: 22008561
+Class: C369-1D-E63C-A
+Date/Time Last modified: 14/8/2023 9.30PM -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Sign Up</h1>
+
+    <form id="signupForm" action="#" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <button id="signpassButton">Sign Up with Signpass</button>
+
+    <script src="script.js"></script>
+</body>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="submit"],
+button {
+    display: block;
+    margin: 10px auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#signpassButton {
+    display: block;
+    
+}
+
+</style>
+
+<script>
+function handleFormSubmit(event) {
+    event.preventDefault(); 
+
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var password = document.getElementById('password').value;
+
+    if (username.trim() === '' || email.trim() === '' || phone.trim() === '') {
+        alert('Please fill in all fields');
+        return;
+    }
+
+    document.getElementById('username').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('password').value = '';
+
+    alert('Sign up successful!');
+    window.location.href = 'gahome.html';
+}
+
+</script>
+</html>

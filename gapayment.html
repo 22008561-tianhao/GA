@@ -1,0 +1,86 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Student Name: TIANHAO
+Student ID: 22008561
+Class: C369-1D-E63C-A
+Date/Time Last modified: 14/8/2023 9.30PM -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #000000;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Payment Page</h1>
+  
+  <form action="/process_payment" method="post">
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" name="card-number" required>
+    
+    <label for="card-holder">Card Holder Name:</label>
+    <input type="text" id="card-holder" name="card-holder" required>
+    
+    <label for="expiry-date">Expiry Date:</label>
+    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+    
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required>
+    
+    <input type="submit" value="Pay" onclick="window.location.href='gaconfirmation.html'">
+  </form>
+  
+  <footer>
+    <p>Click here to go back to the home page <a href="gahome.html">here!</a></p>
+  </footer>
+</body>
+</html>
